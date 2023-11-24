@@ -12,8 +12,8 @@ conn = psycopg2.connect(
 with conn:
     with conn.cursor(cursor_factory= psycopg2.extras.DictCursor) as cur:
         cur.execute("""CREATE TABLE clients (id SERIAL PRIMARY KEY,
-                    firstName VARCHAR NOT NULL,
-                    lastName VARCHAR NOT NULL,
+                    firstname VARCHAR NOT NULL,
+                    lastname VARCHAR NOT NULL,
                     age INTEGER NOT NULL,
                     gender VARCHAR);
                     """
